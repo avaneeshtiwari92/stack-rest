@@ -1,11 +1,9 @@
 package stackrest.restservice;
 
-import org.junit.jupiter.api.Assumptions;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.util.Assert;
 import stackrest.restservice.stack.StackService;
 
 @SpringBootTest
@@ -16,8 +14,21 @@ public class StackServiceTests {
 
   @Test
   public void initializeTest(){
-    String result = stackService.initializeStack(5);
-//    Assert
+    int size = 5;
+    String result = stackService.initializeStack(size);
+    Assertions.assertEquals("Stack created with Size "+size, result);
   }
 
+  @Test
+  public void pushTest(){
+    boolean res = stackService.push(1);
+    Assertions.assertEquals(true, res);
+  }
+
+  @Test
+  public void popTest(){
+    int ex = stackService.peek();
+    int res = stackService.pop();
+    Assertions.assertEquals(ex, res);
+  }
 }

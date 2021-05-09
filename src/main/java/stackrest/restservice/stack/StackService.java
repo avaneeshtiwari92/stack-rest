@@ -22,7 +22,7 @@ public class StackService {
    return "Stack created with Size "+size;
   }
 
-  boolean push(int x)
+  public boolean push(int x)
   {
     if (top >= (size - 1)) {
       System.out.println("Stack Overflow");
@@ -35,7 +35,7 @@ public class StackService {
     }
   }
 
-  int pop()
+  public int pop()
   {
     if (top < 0) {
       System.out.println("Stack Underflow");
@@ -47,7 +47,7 @@ public class StackService {
     }
   }
 
-  int peek()
+  public int peek()
   {
     if (top < 0) {
       System.out.println("Stack Underflow");
