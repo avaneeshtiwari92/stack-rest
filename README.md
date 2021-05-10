@@ -1,6 +1,7 @@
 # stack-rest
 
-This is a Stack Implementation using REST Service.
+This is a Stack Implementation using REST Service. 
+Assumption -> Implemented the stack for Integer data type. It can be implemented for any data type OR it can be made generic also.
 
 Services included ->
 1. Initialize Service (To Initialize Stack as given size).
